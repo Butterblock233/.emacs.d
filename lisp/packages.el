@@ -53,3 +53,7 @@
    :map minibuffer-local-map
    ("C-r" . counsel-minibuffer-history)))(use-package ivy
   :ensure t)
+
+(use-package evil
+  :ensure t
+  :init (evil-mode))

@@ -7,7 +7,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes nil)
  '(global-display-line-numbers-mode t)
- '(package-selected-packages '(use-package))
+ '(package-selected-packages '(undo-fu lsp-ui ivy evil use-package))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
