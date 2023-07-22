@@ -1,12 +1,12 @@
 (eval-when-compile
   (require 'use-package))
-(provide 'packages)
+
 (use-package counsel
   :ensure t)
 
 (use-package amx
   :ensure t
-  :init (amx-mode))
+  :defer (amx-mode))
 
 (use-package ace-window
   :ensure t
@@ -18,10 +18,10 @@
   ("C-a" . mwim-beginning-of-code-or-line)
   ("C-e" . mwim-end-of-code-or-line))
 
-(use-package good-scroll
-  :ensure t
-  :if window-system          ; 在图形化界面时才使用这个插件
-  :init (good-scroll-mode))
+;(use-package good-scroll
+  ;:ensure t
+  ;:if window-system          ; 在图形化界面时才使用这个插件
+  ;:init (good-scroll-mode))
 
 
 ;;;通过use-package实现emacs的autoload
@@ -57,3 +57,21 @@
 (use-package evil
   :ensure t
   :init (evil-mode))
+
+
+(use-package which-key
+  :ensure t
+  :defer (which-key-mode))
+
+(use-package company
+  :bind (:map company-active-map
+	      ("C-n" . 'company-select-next)
+	      ("C-p" . 'company-select-previous))
+  :init
+  (global-company-mode t)
+  :config
+  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0))
+
+
+(provide 'packages)
