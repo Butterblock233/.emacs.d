@@ -5,4 +5,5 @@
 (require 'basic)
 (require 'keymaps)
 (require 'mirrorlist)
-(load-theme 'atom-one-dark t)
+(require 'packages)
+(provide 'init)
