@@ -4,7 +4,6 @@
 (load custom-file 'no-error 'no-message)
 (load-theme 'atom-one-dark t)
 (require 'start-time-eveluate)
-
 (require 'basic)
 (require 'keymaps)
 (require 'mirrorlist)
