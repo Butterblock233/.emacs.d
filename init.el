@@ -2,6 +2,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (setq custom-file (expand-file-name "~/.emacs.d/lisp/custom.el"))
 (load custom-file 'no-error 'no-message)
+(load-theme 'atom-one-dark t)
+(require 'start-time-eveluate)
+
 (require 'basic)
 (require 'keymaps)
 (require 'mirrorlist)
