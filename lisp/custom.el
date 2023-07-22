@@ -5,10 +5,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(cua-mode t)
  '(custom-enabled-themes nil)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(company which-key use-package-hydra undo-fu ivy evil use-package))
+   '(treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

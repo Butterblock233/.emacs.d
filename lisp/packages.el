@@ -56,7 +56,12 @@
 
 (use-package evil
   :ensure t
-  :init (evil-mode))
+  :init (evil-mode)
+  :config
+  (require 'evil-maps)
+
+
+  )
 
 
 (use-package which-key
