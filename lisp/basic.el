@@ -22,8 +22,6 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 (provide 'basic)
 
-
-
 ;(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (electric-pair-mode t)                       ; 自动补全括号
 (add-hook 'prog-mode-hook #'show-paren-mode) ; 编程模式下，光标在括号上时高亮另一个括号
@@ -41,5 +39,5 @@
 ;(setq display-line-numbers-type 'relative)   ; （可选）显示相对行号
 ;(add-to-list 'default-frame-alist '(width . 90))  ; （可选）设定启动图形界面时的初始 Frame 宽度（字符数）
 ;(add-to-list 'default-frame-alist '(height . 55)) ; （可选）设定启动图形界面时的初始 Frame 高度（字符数）
-(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;最大化启动
+;(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;最大化启动
 (provide 'basic)
