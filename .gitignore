@@ -1,4 +1,4 @@
-elpa/*
+elpa/
 auto-save-list/*
 history
 url/
@@ -6,3 +6,4 @@ eln-cache
 ams-items/
 amx-items
 recentf
+.tutor-sc/*
