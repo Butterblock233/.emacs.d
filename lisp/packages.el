@@ -56,9 +56,10 @@
 
 (use-package evil
   :ensure t
-  :init (evil-mode)
+  :init
+  (setq evil-undo-system 'undo-redo)
+  (evil-mode)
   :config
-  (require 'evil-maps)
 
 
   )
@@ -78,5 +79,7 @@
   (setq company-minimum-prefix-length 1)
   (setq company-idle-delay 0))
 
-
+(use-package evil-tutor-sc
+  :ensure t
+  )
 (provide 'packages)
