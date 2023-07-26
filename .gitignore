@@ -7,3 +7,8 @@ ams-items/
 amx-items
 recentf
 .tutor-sc/*
+treemacs-persist
+.gitignore
+*/.config/*
+projectile-bookmarks.eld
+.cache

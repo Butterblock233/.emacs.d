@@ -9,7 +9,7 @@
  '(custom-enabled-themes nil)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(vscode-icon treemacs-tab-bar evil-tutor-sc treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
+   '(dashboard rainbow-delimiters neotree treemacs-projectile company-box vscode-icon treemacs-tab-bar evil-tutor-sc treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
