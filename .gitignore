@@ -12,3 +12,4 @@ treemacs-persist
 */.config/*
 projectile-bookmarks.eld
 .cache
+config/*
