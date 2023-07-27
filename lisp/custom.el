@@ -17,3 +17,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "JetBrains Mono" :foundry "JB" :slant normal :weight normal :height 143 :width normal)))))
+(setq-default highlight-parentheses-face '(:background "#8A2BE2"))

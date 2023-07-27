@@ -8,7 +8,7 @@
 (require 'keymaps)
 (require 'mirrorlist)
 (require 'packages)
+(require 'locations)
+(load "~/.emacs.d/evil-maps.el")
 (provide 'init)
-
-
 ;;;你说的对，但“原神”是一款由
