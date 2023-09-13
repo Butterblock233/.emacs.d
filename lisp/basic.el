@@ -20,8 +20,14 @@
 
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
 (global-set-key (kbd "<f2>") 'open-init-file)
+(defun load-config()
+  (interactive)
+  (load-file "~/.emacs.d/init.el"))
+(global-set-key (kbd "<f3>") 'load-config)
 (provide 'basic)
 
+(setq custom-file (expand-file-name "~/.emacs.d/lisp/custom.el"))
+(load custom-file 'no-error 'no-message)
 ;(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (electric-pair-mode t)                       ; 自动补全括号
 (add-hook 'prog-mode-hook #'show-paren-mode) ; 编程模式下，光标在括号上时高亮另一个括号
@@ -34,7 +40,6 @@
 (global-display-line-numbers-mode 1)         ; 在 Window 显示行号
 (tool-bar-mode -1)                           ; （熟练后可选）关闭 Tool bar
 ;(when (display-graphic-p) (toggle-scroll-bar -1)) ; 图形界面时关闭滚动条
-
 (savehist-mode 1)                            ; （可选）打开 Buffer 历史记录保存
 ;(setq display-line-numbers-type 'relative)   ; （可选）显示相对行号
 ;(add-to-list 'default-frame-alist '(width . 90))  ; （可选）设定启动图形界面时的初始 Frame 宽度（字符数）

@@ -1,3 +1,4 @@
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'atom-one-dark t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -7,9 +8,11 @@
  '(column-number-mode t)
  '(cua-mode t)
  '(custom-enabled-themes nil)
+ '(custom-safe-themes
+   '("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(dashboard rainbow-delimiters neotree treemacs-projectile company-box vscode-icon treemacs-tab-bar evil-tutor-sc treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
+   '(dashboard rainbow-delimiters neotree treemacs-projectile company-box vscode-icon treemacs-tab-bar treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
