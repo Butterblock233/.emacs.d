@@ -13,3 +13,4 @@ treemacs-persist
 projectile-bookmarks.eld
 .cache
 config/*
+lisp/custom.el

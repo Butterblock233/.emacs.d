@@ -1,3 +1,5 @@
+;;;emacs's custom face configerations stores here.
+;;;Dut to this file will be automatelly egited by emacs,this file will be ignored in newer versions.
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -15,4 +17,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "JetBrains Mono" :foundry "outline" :slant normal :weight regular :height 110 :width normal)))))
+ '(default ((t (:family "JetBrains Mono" :foundry "outline" :slant normal :weight regular :height 125 :width normal)))))
