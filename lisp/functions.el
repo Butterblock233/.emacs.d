@@ -6,4 +6,4 @@
                 (float-time
                     (time-subtract after-init-time before-init-time)))
         gcs-done)))
-(provide 'start-time-eveluate)
+(provide 'functions)

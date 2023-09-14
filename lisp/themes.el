@@ -1,23 +1,15 @@
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'atom-one-dark t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(cua-mode t)
- '(custom-enabled-themes nil)
- '(custom-safe-themes
-   '("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))
- '(global-display-line-numbers-mode t)
- '(package-selected-packages
-   '(dashboard rainbow-delimiters neotree treemacs-projectile company-box vscode-icon treemacs-tab-bar treemacs-all-the-icons company which-key use-package-hydra undo-fu ivy evil use-package))
- '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "JetBrains Mono" :foundry "JB" :slant normal :weight normal :height 143 :width normal)))))
-(setq-default highlight-parentheses-face '(:background "#8A2BE2"))
+;(use-package doom-themes
+;  :ensure t
+;  :config
+;  ;; Global settings (defaults)
+;  (setq doom-themes-enable-bold nil    ; if nil, bold is universally disabled
+;	doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;  (load-theme 'doom-monokai-octagon t)
+;  (doom-themes-treemacs-config))
+
+;(use-package all-the-icons
+;  :if (display-graphic-p))
+(load-theme 'atom-one-dark)
+
+
+(provide 'themes)
