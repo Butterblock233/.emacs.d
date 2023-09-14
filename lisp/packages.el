@@ -119,16 +119,4 @@
 		  (projects . 10))) ;; 显示多少个最近项目
  (dashboard-setup-startup-hook))
 
-(use-package smart-mode-line
-  :ensure t
-  :init
-  ; (setq sml/no-confirm-load-theme t)  ; avoid asking when startup
-  (sml/setup)
-  :config
-  (setq rm-blacklist
-    (format "^ \\(%s\\)$"
-      (mapconcat #'identity
-        '("Projectile.*" "company.*" "Google"
-	  "Undo-Tree" "counsel" "ivy" "yas" "WK")
-         "\\|"))))
 (provide 'packages)
