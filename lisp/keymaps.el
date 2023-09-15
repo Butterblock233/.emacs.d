@@ -2,5 +2,5 @@
 ;(global-set-key (kbd "C-k") nil)
 ;(global-set-key (kbd "C-h") nil)
 ;(global-set-key (kbd "C-l") nil)
-
+(global-set-key (kbd "C-S-s") 'save-buffer)
 (provide 'keymaps)
