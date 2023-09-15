@@ -119,4 +119,7 @@
 		  (projects . 10))) ;; 显示多少个最近项目
  (dashboard-setup-startup-hook))
 
+(use-package magit
+  :ensure t
+  )
 (provide 'packages)
