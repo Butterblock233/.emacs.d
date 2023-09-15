@@ -14,3 +14,5 @@ projectile-bookmarks.eld
 .cache
 config/*
 lisp/custom.el
+transient/history.el
+.gitignore
