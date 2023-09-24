@@ -10,6 +10,13 @@
 ;(use-package all-the-icons
 ;  :if (display-graphic-p))
 (load-theme 'atom-one-dark)
+(use-package smart-mode-line-atom-one-dark-theme
+  :ensure t)
 
+;; smart-mode-line
+(use-package smart-mode-line
+  :config
+  (setq sml/theme 'atom-one-dark)
+  (sml/setup))
 
 (provide 'themes)

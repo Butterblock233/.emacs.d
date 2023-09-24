@@ -16,18 +16,6 @@
 ;(icomplete-mode 1)
 
 
-;; 快速打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
-(global-set-key (kbd "<f2>") 'open-init-file)
-(defun load-config()
-  (interactive)
-  (load-file "~/.emacs.d/init.el"))
-(global-set-key (kbd "<f3>") 'load-config)
-(provide 'basic)
 
 (setq custom-file (expand-file-name "~/.emacs.d/lisp/custom.el"))
 (load custom-file 'no-error 'no-message)

@@ -75,6 +75,7 @@
 	      ("C-p" . 'company-select-previous))
   :init
   (global-company-mode t)
+  (add-hook 'after-init-hook 'company-tng-mode)
   :config
   (setq company-minimum-prefix-length 1)
   (setq company-idle-delay 0))
@@ -119,7 +120,13 @@
 		  (projects . 10))) ;; 显示多少个最近项目
  (dashboard-setup-startup-hook))
 
-(use-package magit
+(use-package eglot
   :ensure t
-  )
+    ;:hook (prog-mode . (eglot t) )
+)
+
+
+(use-package magit
+:ensure t
+)
 (provide 'packages)

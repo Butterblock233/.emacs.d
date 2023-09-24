@@ -13,6 +13,8 @@ treemacs-persist
 projectile-bookmarks.eld
 .cache
 config/*
+transient/history.el
 lisp/custom.el
 transient/history.el
 .gitignore
+
