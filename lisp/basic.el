@@ -1,8 +1,11 @@
 (setq custom-file "~/.emacs.d/lisp/custom.el")
 (load custom-file)
+;;;编码环境--------------------;;;
+
+;;;------------------------;;;
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
-
+;;禁用提示音
 (setq ring-bell-function 'ignore)
 ;; 关闭文件滑动控件
 ;(scroll-bar-mode -1)
@@ -17,8 +20,6 @@
 
 
 
-(setq custom-file (expand-file-name "~/.emacs.d/lisp/custom.el"))
-(load custom-file 'no-error 'no-message)
 ;(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (electric-pair-mode t)                       ; 自动补全括号
 (add-hook 'prog-mode-hook #'show-paren-mode) ; 编程模式下，光标在括号上时高亮另一个括号

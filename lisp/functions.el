@@ -1,3 +1,4 @@
+(require 'cc-mode)
 ;;;start-time-eveluate 测量emacs启动时间
 (add-hook 'emacs-startup-hook
     (lambda ()
@@ -19,4 +20,8 @@
   (load-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f3>") 'load-config)
 
+;(defun compile-and-run-cpp()
+;    (interactive)
+;  (compile (format "g++ %s && ./a.out" (buffer-file-name))))
+;(define-key c++-mode-map (kbd "<f5>") #'compile-and-run-cpp)
 (provide 'functions)

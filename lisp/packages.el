@@ -43,7 +43,7 @@
   (setq search-default-mode #'char-fold-to-regexp)
   (setq ivy-count-format "(%d/%d) ")
   :bind
-  (("C-s" . 'swiper)
+  (("C-x C-s" . 'swiper)
    ("C-x b" . 'ivy-switch-buffer)
    ("C-c v" . 'ivy-push-view)
    ("C-c s" . 'ivy-switch-view)
@@ -57,12 +57,9 @@
 (use-package evil
   :ensure t
   :init
-  (setq evil-undo-system 'undo-redo)
   (evil-mode)
   :config
-
-
-  )
+  (setq evil-undo-system 'undo-redo))
 
 
 (use-package which-key
@@ -111,6 +108,9 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 (use-package dashboard
  :ensure t
+ ;:bind 
+ ;(:map dashboard-mode-map
+ ;      ("r" dashboard-jump-to-previous))
  :config
  ;(setq dashboard-banner-logo-title "Emacs\nEdit improved") ;; 个性签名，随读者喜好设置
  ;; (setq dashboard-projects-backend 'projectile) ;; 读者可以暂时注释掉这一行，等安装了 projectile 后再使用
@@ -129,4 +129,11 @@
 (use-package magit
 :ensure t
 )
-(provide 'packages)
+
+(use-package quickrun
+  :ensure t
+  :defer t
+  :bind
+  (:map quickrun--mode-map
+	("q" . "C-x 0")))
+  (provide 'packages)

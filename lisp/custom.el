@@ -7,10 +7,10 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-safe-themes
-   '("0c860c4fe9df8cff6484c54d2ae263f19d935e4ff57019999edbda9c7eda50b8" default))
+   '("288482f5c627c1fe5a1d26fcc17ec6ca8837f36bf940db809895bf3f8e2e4edd" "0c860c4fe9df8cff6484c54d2ae263f19d935e4ff57019999edbda9c7eda50b8" default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(doom-themes which-key treemacs-tab-bar treemacs-projectile treemacs-evil smart-mode-line-atom-one-dark-theme rust-mode rainbow-delimiters mwim evil-tutor-sc dashboard counsel company atom-one-dark-theme amx))
+   '(quickrun magit doom-themes which-key treemacs-tab-bar treemacs-projectile treemacs-evil smart-mode-line-atom-one-dark-theme rust-mode rainbow-delimiters mwim evil-tutor-sc dashboard counsel company atom-one-dark-theme amx))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
