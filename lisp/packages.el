@@ -66,16 +66,6 @@
   :ensure t
   :defer (which-key-mode))
 
-(use-package company
-  :bind (:map company-active-map
-	      ("C-n" . 'company-select-next)
-	      ("C-p" . 'company-select-previous))
-  :init
-  (global-company-mode t)
-  (add-hook 'after-init-hook 'company-tng-mode)
-  :config
-  (setq company-minimum-prefix-length 1)
-  (setq company-idle-delay 0))
 
 (use-package evil-tutor-sc
   :ensure t
@@ -120,11 +110,31 @@
 		  (projects . 10))) ;; 显示多少个最近项目
  (dashboard-setup-startup-hook))
 
-(use-package eglot
-  :ensure t
-    ;:hook (prog-mode . (eglot t) )
-)
+;;================lsp-bridge================
+(add-to-list 'load-path "~/.emacs.d/lisp/lsp-bridge")
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
+
+;;=========================================
+;;(use-package eglot
+;;  :ensure t
+;;  :hook prog-mode-hook . 'eglot-ensure
+;;)
+
+;;(use-package company
+;;  :bind (:map company-active-map
+;;	      ("C-n" . 'company-select-next)
+;;	      ("C-p" . 'company-select-previous))
+;;  :init
+;;  (global-company-mode t)
+;;  (add-hook 'after-init-hook 'company-tng-mode)
+;;  :config
+;;  (setq company-minimum-prefix-length 1)
+;;  (setq company-idle-delay 0))
 
 (use-package magit
 :ensure t
@@ -136,4 +146,9 @@
   :bind
   (:map quickrun--mode-map
 	("q" . "C-x 0")))
+(use-package realgud
+  :ensure t)
+(use-package yasnippet
+  :ensure t
+  )
   (provide 'packages)
