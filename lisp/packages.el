@@ -59,9 +59,20 @@
   :init
   (evil-mode)
   :config
-  (setq evil-undo-system 'undo-redo))
-
-
+  (setq evil-undo-system 'undo-redo)
+  :bind(
+     :map evil-normal-state-map(
+	  ("C-u" . ' evil-scroll-up))
+     :map evil-insert-state-map(
+	("C-h" . 'left-char)
+	("C-j" . 'next-line)
+	("C-k" . 'previous-line)
+	("C-l" . 'right-char)
+	)
+     ;:map dashboard-mode-map(
+     ;("r" . 'dashbroad-jump-to-recents))
+     )
+)
 (use-package which-key
   :ensure t
   :defer (which-key-mode))
@@ -114,11 +125,16 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/lsp-bridge")
 
 (require 'yasnippet)
-(yas-global-mode 1)
 
 (require 'lsp-bridge)
 (global-lsp-bridge-mode)
 
+
+;(use-package lsp-bridge
+ ; :init(
+ ; yas-global-mode 1
+ ; global-lsp-bridge-mode 1
+;))
 ;;=========================================
 ;;(use-package eglot
 ;;  :ensure t
@@ -150,5 +166,7 @@
   :ensure t)
 (use-package yasnippet
   :ensure t
+  :init
+  (yas-global-mode 1)
   )
-  (provide 'packages)
+(provide 'packages)

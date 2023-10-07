@@ -13,12 +13,12 @@
   (dired "~/.emacs.d/"))
 
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
-(global-set-key (kbd "<f2>") 'open-init-file)
+(global-set-key (kbd "<f3>") 'open-init-file)
 (defun load-config()
   (interactive)
   (eval-buffer)
   (load-file "~/.emacs.d/init.el"))
-(global-set-key (kbd "<f3>") 'load-config)
+(global-set-key (kbd "C-x <f3>") 'load-config)
 
 ;(defun compile-and-run-cpp()
 ;    (interactive)

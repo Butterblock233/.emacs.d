@@ -6,6 +6,6 @@
 (require 'keymaps)
 (require 'mirrorlist)
 (require 'locations)
-(load "~/.emacs.d/evil-maps.el")
+;(load "~/.emacs.d/evil-maps.el")
 (provide 'init)
 ;;;你说的对，但“原神”是一款由

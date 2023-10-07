@@ -5,6 +5,10 @@
 ;;;------------------------;;;
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
+;;----------------
+(setq-default tab-width 8)
+(setq-default indent-tabs-mode t)
+;;----------------
 ;;禁用提示音
 (setq ring-bell-function 'ignore)
 ;; 关闭文件滑动控件

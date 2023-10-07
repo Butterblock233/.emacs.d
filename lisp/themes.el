@@ -16,7 +16,12 @@
 ;; smart-mode-line
 (use-package smart-mode-line
   :config
+  (setq rm-blacklist
+    (format "^ \\(%s\\)$"
+      (mapconcat #'identity
+        '("Projectile.*" "LSPB" "hs" "eldoc" "company.*" "Google"
+	  "Undo-Tree" "counsel" "ivy" "yas" "WK")
+         "\\|")))
   (setq sml/theme 'atom-one-dark)
   (sml/setup))
-
 (provide 'themes)

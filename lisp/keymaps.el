@@ -4,6 +4,8 @@
 ;(global-set-key (kbd "C-l") nil)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "<f5>") 'quickrun)
+(global-set-key (kbd "C-<backspace>") 'evil-delete-backward-word)
+;(global-set-key (kbd "C-backspace") ')
 ;(global-set-key (kbd "C-o") 'ace-window)
 ;(define-key 'quickrun--mode-map (kbd "<escape>") (kbd "C-x 0") )
 (provide 'keymaps)
