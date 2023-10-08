@@ -6,7 +6,7 @@
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
 ;;----------------
-(setq-default tab-width 8)
+(setq-default tab-width 4)
 (setq-default indent-tabs-mode t)
 ;;----------------
 ;;禁用提示音
