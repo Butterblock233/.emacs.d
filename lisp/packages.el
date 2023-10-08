@@ -62,13 +62,17 @@
   (setq evil-undo-system 'undo-redo)
   :bind(
      :map evil-normal-state-map(
-	  ("C-u" . ' evil-scroll-up))
+	  ("C-u" . ' evil-scroll-up)
+	  )
      :map evil-insert-state-map(
 	("C-h" . 'left-char)
 	("C-j" . 'next-line)
 	("C-k" . 'previous-line)
 	("C-l" . 'right-char)
-	)
+	("C-v" . 'yank))
+     :map evil-visual-state-map(
+				 ;("C-c" 'cua-copy-region)
+			 )
      ;:map dashboard-mode-map(
      ;("r" . 'dashbroad-jump-to-recents))
      )
@@ -122,19 +126,28 @@
  (dashboard-setup-startup-hook))
 
 ;;================lsp-bridge================
-(add-to-list 'load-path "~/.emacs.d/lisp/lsp-bridge")
 
-(require 'yasnippet)
+;(require 'yasnippet)
 
-(require 'lsp-bridge)
-(global-lsp-bridge-mode)
+;(require 'lsp-bridge)
+;(global-lsp-bridge-mode)
 
+(use-package yasnippet
+  :ensure t
+  :init
+  (yas-global-mode 1)
+  )
 
 ;(use-package lsp-bridge
- ; :init(
- ; yas-global-mode 1
- ; global-lsp-bridge-mode 1
-;))
+;  :load-path "~/.emacs.d/lisp/lsp-bridge"
+;  (require 'lsp-bridge)
+;  :commands(global-lsp-bridge-mode)
+;  :init
+;  (global-lsp-bridge-mode)
+;  :bind
+;  (:map acm-mode-map
+;		("C-n" .'acm-select-next)
+;		("C-p" . 'acm-select-prev)))
 ;;=========================================
 ;;(use-package eglot
 ;;  :ensure t
@@ -164,9 +177,4 @@
 	("q" . "C-x 0")))
 (use-package realgud
   :ensure t)
-(use-package yasnippet
-  :ensure t
-  :init
-  (yas-global-mode 1)
-  )
 (provide 'packages)
