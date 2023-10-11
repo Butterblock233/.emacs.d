@@ -127,10 +127,10 @@
 
 ;;================lsp-bridge================
 
-;(require 'yasnippet)
+(require 'yasnippet)
 
-;(require 'lsp-bridge)
-;(global-lsp-bridge-mode)
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
 
 (use-package yasnippet
   :ensure t
@@ -177,4 +177,22 @@
 	("q" . "C-x 0")))
 (use-package realgud
   :ensure t)
+(use-package ligature
+  :load-path "path-to-ligature-repo"
+  :config
+  ;; Enable all JetBrains Mono ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("-|" "-~" "---" "-<<" "-<" "--" "->" "->>" "-->" "///" "/=" "/=="
+                                      "/>" "//" "/*" "*>" "***" "*/" "<-" "<<-" "<=>" "<=" "<|" "<||"
+                                      "<|||" "<|>" "<:" "<>" "<-<" "<<<" "<==" "<<=" "<=<" "<==>" "<-|"
+                                      "<<" "<~>" "<=|" "<~~" "<~" "<$>" "<$" "<+>" "<+" "</>" "</" "<*"
+                                      "<*>" "<->" "<!--" ":>" ":<" ":::" "::" ":?" ":?>" ":=" "::=" "=>>"
+                                      "==>" "=/=" "=!=" "=>" "===" "=:=" "==" "!==" "!!" "!=" ">]" ">:"
+                                      ">>-" ">>=" ">=>" ">>>" ">-" ">=" "&&&" "&&" "|||>" "||>" "|>" "|]"
+                                      "|}" "|=>" "|->" "|=" "||-" "|-" "||=" "||" ".." ".?" ".=" ".-" "..<"
+                                      "..." "+++" "+>" "++" "[||]" "[<" "[|" "{|" "??" "?." "?=" "?:" "##"
+                                      "###" "####" "#[" "#{" "#=" "#!" "#:" "#_(" "#_" "#?" "#(" ";;" "_|_"
+                                      "__" "~~" "~~>" "~>" "~-" "~@" "$>" "^=" "]#" "--"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
 (provide 'packages)
