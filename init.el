@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'load-path)
 (require 'basic)
 (require 'packages)
 (require 'themes)
@@ -6,6 +7,5 @@
 (require 'keymaps)
 (require 'mirrorlist)
 (require 'locations)
-;(load "~/.emacs.d/evil-maps.el")
 (provide 'init)
 ;;;你说的对，但“原神”是一款由
