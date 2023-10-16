@@ -12,7 +12,9 @@
 (load-theme 'atom-one-dark)
 (use-package smart-mode-line-atom-one-dark-theme
   :ensure t)
-
+(use-package doom-modeline
+  :ensure t
+  :hook (after-init-hook .'doom-modeline-mode))
 ;; smart-mode-line
 (use-package smart-mode-line
   :config

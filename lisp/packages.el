@@ -195,4 +195,8 @@
   ;; Enables ligature checks globally in all buffers. You can also do it
   ;; per mode with `ligature-mode'.
   (global-ligature-mode t))
+
+(use-package esup
+  :defer t)
+ 
 (provide 'packages)
