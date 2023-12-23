@@ -10,20 +10,16 @@
 ;(use-package all-the-icons
 ;  :if (display-graphic-p))
 (load-theme 'atom-one-dark)
-(use-package smart-mode-line-atom-one-dark-theme
-  :ensure t)
+(use-package atom-one-dark-theme
+  :ensure t
+  :init ( load-theme 'atom-one-dark t))
 (use-package doom-modeline
   :ensure t
-  :hook (after-init-hook .'doom-modeline-mode))
-;; smart-mode-line
-(use-package smart-mode-line
-  :config
-  (setq rm-blacklist
-    (format "^ \\(%s\\)$"
-      (mapconcat #'identity
-        '("Projectile.*" "LSPB" "hs" "eldoc" "company.*" "Google"
-	  "Undo-Tree" "counsel" "ivy" "yas" "WK")
-         "\\|")))
-  (setq sml/theme 'atom-one-dark)
-  (sml/setup))
+  :init (doom-modeline-mode 1))
+;--------------------holo-layer--------------------
+(add-to-list 'load-path "~/.emacs.d/lisp/holo-layer")
+(require 'holo-layer)
+;(holo-layer-enable)
+;(setq 'holo-layer-enable-cursor-animation 1)
+;(setq 'holo-layer-enable-cursor-animation t)
 (provide 'themes)

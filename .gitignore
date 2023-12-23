@@ -17,4 +17,4 @@ transient/history.el
 lisp/custom.el
 transient/history.el
 .gitignore
-
+./halo-layer/*

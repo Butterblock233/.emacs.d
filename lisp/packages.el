@@ -1,7 +1,9 @@
+(require 'load-path)
 (eval-when-compile
   (require 'use-package))
 
 (use-package counsel
+  :defer t
   :ensure t)
 
 (use-package amx
@@ -10,6 +12,7 @@
 
 (use-package ace-window
   :ensure t
+  :defer t
   :bind (("C-x o" . 'ace-window)))
 
 (use-package mwim
@@ -84,6 +87,7 @@
 
 (use-package evil-tutor-sc
   :ensure t
+  :defer t
   )
 
 
@@ -105,11 +109,13 @@
 
 (use-package treemacs-projectile
   :ensure t
+  :defer t
   :after (treemacs projectile))
 
 
 (use-package rainbow-delimiters
   :ensure t
+  :defer t
   :hook (prog-mode . rainbow-delimiters-mode))
 (use-package dashboard
  :ensure t
@@ -122,15 +128,10 @@
  ;(setq dashboard-startup-banner 'official) ;; 也可以自定义图片
  (setq dashboard-items '((recents  . 5)   ;; 显示多少个最近文件
 		  (bookmarks . 5)  ;; 显示多少个最近书签
-		  (projects . 10))) ;; 显示多少个最近项目
- (dashboard-setup-startup-hook))
+		  (projects . 10)))) ;; 显示多少个最近项目
 
-;;================lsp-bridge================
+;(require 'yasnippet)
 
-(require 'yasnippet)
-
-(require 'lsp-bridge)
-(global-lsp-bridge-mode)
 
 (use-package yasnippet
   :ensure t
@@ -138,6 +139,11 @@
   (yas-global-mode 1)
   )
 
+;;================lsp-bridge================
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
+(define-key lsp-bridge-mode-map (kbd "C-n") 'acm-select-next)
+(define-key acm-mode-map (kbd "C-p") 'acm-select-prev)
 ;(use-package lsp-bridge
 ;  :load-path "~/.emacs.d/lisp/lsp-bridge"
 ;  (require 'lsp-bridge)
@@ -149,10 +155,10 @@
 ;		("C-n" .'acm-select-next)
 ;		("C-p" . 'acm-select-prev)))
 ;;=========================================
-;;(use-package eglot
-;;  :ensure t
-;;  :hook prog-mode-hook . 'eglot-ensure
-;;)
+(use-package eglot
+  :ensure
+  ;:hook prog-mode . (eglot)
+)
 
 ;;(use-package company
 ;;  :bind (:map company-active-map
@@ -176,6 +182,7 @@
   (:map quickrun--mode-map
 	("q" . "C-x 0")))
 (use-package realgud
+  :defer t
   :ensure t)
 (use-package ligature
   :load-path "path-to-ligature-repo"
