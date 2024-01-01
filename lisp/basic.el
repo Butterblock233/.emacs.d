@@ -3,6 +3,7 @@
 ;(setq 'evil-overriding-maps f)
 ;;;编码环境--------------------;;;
 (setq keyboard-coding-system 'utf-8);;设置默认编码为UTF-8
+(set-default-coding-systems 'utf-8)
 ;;;------------------------;;;
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)

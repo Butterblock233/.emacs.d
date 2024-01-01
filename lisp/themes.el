@@ -9,16 +9,18 @@
 
 ;(use-package all-the-icons
 ;  :if (display-graphic-p))
-(load-theme 'atom-one-dark)
+;(load-theme 'atom-one-dark)
 (use-package atom-one-dark-theme
   :ensure t
   :init ( load-theme 'atom-one-dark t))
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1))
-;--------------------holo-layer--------------------
-(add-to-list 'load-path "~/.emacs.d/lisp/holo-layer")
-(require 'holo-layer)
+(use-package vscode-icon
+  :ensure t
+  :commands (vscode-icon-for-file));--------------------holo-layer--------------------
+;(add-to-list 'load-path "~/.emacs.d/lisp/holo-layer")
+;(require 'holo-layer)
 ;(holo-layer-enable)
 ;(setq 'holo-layer-enable-cursor-animation 1)
 ;(setq 'holo-layer-enable-cursor-animation t)

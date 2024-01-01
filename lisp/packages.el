@@ -140,10 +140,10 @@
   )
 
 ;;================lsp-bridge================
-(require 'lsp-bridge)
-(global-lsp-bridge-mode)
-(define-key lsp-bridge-mode-map (kbd "C-n") 'acm-select-next)
-(define-key acm-mode-map (kbd "C-p") 'acm-select-prev)
+;(require 'lsp-bridge)
+;(global-lsp-bridge-mode)
+;(define-key lsp-bridge-mode-map (kbd "C-n") 'acm-select-next)
+;(define-key acm-mode-map (kbd "C-p") 'acm-select-prev)
 ;(use-package lsp-bridge
 ;  :load-path "~/.emacs.d/lisp/lsp-bridge"
 ;  (require 'lsp-bridge)
@@ -173,6 +173,7 @@
 
 (use-package magit
 :ensure t
+:defer t
 )
 
 (use-package quickrun
@@ -181,10 +182,14 @@
   :bind
   (:map quickrun--mode-map
 	("q" . "C-x 0")))
-(use-package realgud
-  :defer t
-  :ensure t)
+;(use-package realgud
+;  :defer t
+;   :ensure t)
+(use-package dape
+  :ensure t
+  :defer 5)
 (use-package ligature
+  :ensure t
   :load-path "path-to-ligature-repo"
   :config
   ;; Enable all JetBrains Mono ligatures in programming modes

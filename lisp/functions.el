@@ -1,4 +1,3 @@
-(require 'cc-mode)
 ;;;start-time-eveluate 测量emacs启动时间
 (add-hook 'emacs-startup-hook
     (lambda ()
