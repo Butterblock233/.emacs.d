@@ -18,3 +18,4 @@ lisp/custom.el
 transient/history.el
 .gitignore
 ./halo-layer/*
+site-lisp/custom.el
