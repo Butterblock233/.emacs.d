@@ -72,14 +72,7 @@
 	("C-j" . 'next-line)
 	("C-k" . 'previous-line)
 	("C-l" . 'right-char)
-	("C-v" . 'yank))
-     :map evil-visual-state-map(
-				 ;("C-c" 'cua-copy-region)
-			 )
-     ;:map dashboard-mode-map(
-     ;("r" . 'dashbroad-jump-to-recents))
-     )
-)
+	("C-v" . 'yank))))
 (use-package which-key
   :ensure t
   :defer (which-key-mode))
@@ -160,16 +153,19 @@
   ;:hook prog-mode . (eglot)
 )
 
-;;(use-package company
-;;  :bind (:map company-active-map
-;;	      ("C-n" . 'company-select-next)
-;;	      ("C-p" . 'company-select-previous))
-;;  :init
-;;  (global-company-mode t)
-;;  (add-hook 'after-init-hook 'company-tng-mode)
-;;  :config
-;;  (setq company-minimum-prefix-length 1)
-;;  (setq company-idle-delay 0))
+(use-package company
+  :bind (:map company-active-map
+	      ("C-n" . 'company-select-next)
+	      ("C-p" . 'company-select-previous)
+          ("C-SPC" . 'company-complete)
+		  ("<Tab>" . 'company-complete-selection))
+  :init
+  (global-company-mode t)
+  ;(add-hook 'after-init-hook 'company-tng-mode)
+
+  :config
+  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0))
 
 (use-package magit
 :ensure t
